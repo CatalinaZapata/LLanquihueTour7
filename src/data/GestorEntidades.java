@@ -15,21 +15,6 @@ public class GestorEntidades {
         listaEntidades.add(entidades);
     }
 
-    /*public ArrayList<Registrable> cargarEntidades() {
-        String rutaArchivo = "src/resources/tours.txt";
-        try {
-            File archivo = new File(rutaArchivo);
-            Scanner lector = new Scanner(archivo);
-            while(lector.hasNextLine()){
-                String linea = lector.nextLine();
-                String[] partes = linea.split("\\|");
-            }
-        } catch (Exception e) {
-            System.out.println("Error: No se encuentra el archivo.");
-        }
-        return listaEntidades;
-    }*/
-
     public void registrarGuiaTuristico(){//metodo con el formato de GT
         try (BufferedWriter escribir = new BufferedWriter((new FileWriter("src/resources/tours.txt", true)))){//FileWriter escribir = new FileWriter(new FileWriter("src/resources/tours.txt"
             String nomG = validador.validarIngreso("Nombre: ");
@@ -80,10 +65,34 @@ public class GestorEntidades {
         JOptionPane.showMessageDialog(null, "Registrado exitosamente.");
     }
 
+    public void cargarArchivo(){
+        try(BufferedReader leer = new BufferedReader(new FileReader("src/resources/tours.txt"))){
+            String linea;
+            while((linea = leer.readLine()) != null){
+                String[] datos = linea.split("\\|");
+
+                if(datos[0].equals("GuiaTuristico")){
+                    agregarEntidades(new GuiaTuristico(datos[1], Integer.parseInt(datos[2]), datos[3]));
+                }
+
+                if(datos[0].equals("ColaboradorExterno")){
+                    agregarEntidades(new ColaboradorExterno(datos[1], Integer.parseInt(datos[2]), datos[3], datos[4]));
+                }
+
+                if(datos[0].equals("Movilizacion")){
+                    agregarEntidades(new Movilizacion( datos[1], Integer.parseInt(datos[2]), datos[3], datos[4]));
+                }
+            }
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(null,"Error: No se logra cargar archivo.");
+        }
+    }
+
     public void mostrarHistorialResumen() {//metodo para mostrar el historial registrado en la sesion
         StringBuilder reporte = new StringBuilder("Entidades Registradas: \n\n");
-        for(Registrable registrable : listaEntidades){//for-each permite recorrer los datos de la lista.
-            if(registrable instanceof RecursoAgencia){//permite diferenciar el tipo de obj de acuerdo a la clase y eso ayuda a la impresion correcta de la info
+        String linea;
+        for(Registrable registrable : listaEntidades) {//for-each permite recorrer los datos de la lista.
+            if (registrable instanceof RecursoAgencia) {//permite diferenciar el tipo de obj de acuerdo a la clase y eso ayuda a la impresion correcta de la info
                 reporte.append("");
                 System.out.println("");
             }

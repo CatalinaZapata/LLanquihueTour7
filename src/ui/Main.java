@@ -6,6 +6,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         GestorEntidades gestor = new GestorEntidades();
+        gestor.cargarArchivo();
         boolean continuar = true;
 
         while (continuar) {
