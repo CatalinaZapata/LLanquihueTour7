@@ -1,0 +1,9 @@
+GuiaTuristico|Camila Torres|1001|Trekking en volcanes|LlanquihueTour
+GuiaTuristico|Felipe Andrade|1002|Avistamiento de fauna|LlanquihueTour
+ColaboradorExterno|Martin Valdes|2001|Historia local|Patagonia Experience
+Movilizacion|Rodrigo Fuentes|3001|Traslado turistico de pasajeros|Sur Transfer
+Movilizacion|Daniela Rojas|3002|Conduccion ruta austral|Llanquihue TransportesNombre: Catalina Zapata | ID: 1005 | Especialidad: Aventura
+
+GuiaTuristico|Catalina Zapata|5001|Cultural|LlanquihueTour
+GuiaTuristico|Cata|8001|H|LlanquihueTour
+GuiaTuristico|A|1|A|LlanquihueTour
