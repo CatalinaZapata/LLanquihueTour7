@@ -15,7 +15,7 @@ public class GestorEntidades {
         listaEntidades.add(entidades);
     }
 
-    public void registrarGuiaTuristico(){//metodo con el formato de GT
+    public void registrarGuiaTuristico(){//metodo para agregar con el formato de GT
         try (BufferedWriter escribir = new BufferedWriter((new FileWriter("src/resources/tours.txt", true)))){//FileWriter escribir = new FileWriter(new FileWriter("src/resources/tours.txt"
             String nomG = validador.validarIngreso("Nombre: ");
             int idG = validador.validarID("ID: ");
@@ -33,7 +33,7 @@ public class GestorEntidades {
         JOptionPane.showMessageDialog(null, "Registrado exitosamente.");
     }
 
-    public void registrarColaboradorExterno(){//metodo con el formato de CE
+    public void registrarColaboradorExterno(){//metodo para agregar con el formato de CE
         try(BufferedWriter escribir = new BufferedWriter((new FileWriter("src/resources/tours.txt", true)))) {
             String nomE = validador.validarIngreso("Nombre: ");
             int idE = validador.validarID("ID: ");
@@ -53,7 +53,7 @@ public class GestorEntidades {
         JOptionPane.showMessageDialog(null, "Registrado exitosamente.");
     }
 
-    public void registrarMovilizacion(){//metodo con el formato de M
+    public void registrarMovilizacion(){//metodo para agregar con el formato de M
         try(BufferedWriter escribir = new BufferedWriter((new FileWriter("src/resources/tours.txt", true)))) {
             String nomM = validador.validarIngreso("Nombre: ");
             int idM = validador.validarID("ID: ");
@@ -73,7 +73,7 @@ public class GestorEntidades {
         JOptionPane.showMessageDialog(null, "Registrado exitosamente.");
     }
 
-    public void cargarArchivo(){
+    public void cargarArchivo(){//metodo que lee y guarda los datos en buffer
         try(BufferedReader leer = new BufferedReader(new FileReader("src/resources/tours.txt"))){
             String linea;
             while((linea = leer.readLine()) != null){
@@ -96,7 +96,7 @@ public class GestorEntidades {
         }
     }
 
-    public void mostrarHistorialResumen() {//metodo para mostrar el historial registrado en la sesion
+    public void mostrarHistorialResumen() {//metodo para mostrar el historial registrado
         StringBuilder reporte = new StringBuilder("Entidades Registradas: \n\n");
         //String linea;
         for(Registrable registrable : listaEntidades) {//for-each permite recorrer los datos de la lista.
@@ -110,9 +110,9 @@ public class GestorEntidades {
         JOptionPane.showMessageDialog(null, reporte.toString());
     }
 
-    public void filtrarEntidades() {
-        String[] desplegableEntidades = {"GuiaTuristico",
-                                         "ColaboradorExterno",
+    public void filtrarEntidades() {//metodo para filtrar por entidad
+        String[] desplegableEntidades = {"Guia Turistico",
+                                         "Colaborador Externo",
                                          "Movilizacion"};
 
         Object opcionEntidades = JOptionPane.showInputDialog(null,
@@ -126,10 +126,10 @@ public class GestorEntidades {
         StringBuilder filtroEntidades = new StringBuilder("Resultado del filtro: \n\n");
 
         for (Registrable registrable : listaEntidades) {
-            if (opcionEntidades.equals("GuiaTuristico") && registrable instanceof GuiaTuristico){
+            if (opcionEntidades.equals("Guia Turistico") && registrable instanceof GuiaTuristico){
                 filtroEntidades.append(registrable).append("\n");
             }
-            if (opcionEntidades.equals("ColaboradorExterno") && registrable instanceof ColaboradorExterno){
+            if (opcionEntidades.equals("Colaborador Externo") && registrable instanceof ColaboradorExterno){
                 filtroEntidades.append(registrable).append("\n");
             }
             if (opcionEntidades.equals("Movilizacion") && registrable instanceof Movilizacion){
