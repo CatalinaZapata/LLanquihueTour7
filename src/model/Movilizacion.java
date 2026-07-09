@@ -4,7 +4,7 @@ public class Movilizacion extends RecursoAgencia implements Registrable{//Clase 
     private String tipoVehiculo;//para el tipo de vehiculo que conduce
     private String agenciaMovilizacion;
 
-    public Movilizacion(String nombre, int id, String tipoVehiculo, String agenciaMovilizacion) {
+    public Movilizacion(String nombre, ID id, String tipoVehiculo, String agenciaMovilizacion) {
         super(nombre, id);
         this.tipoVehiculo = tipoVehiculo;
         this.agenciaMovilizacion = agenciaMovilizacion;
@@ -16,6 +16,11 @@ public class Movilizacion extends RecursoAgencia implements Registrable{//Clase 
     }
 
     @Override
+    public String registrarDatos() {
+        return "Movilizacion|" + super.registrarDatos() + "|" + tipoVehiculo + "|" + agenciaMovilizacion;
+    }
+
+    @Override
     public void mostrarResumen() {
         System.out.print("Tipo Trabajador: Conductor | ");
         super.mostrarResumen();
@@ -24,6 +29,6 @@ public class Movilizacion extends RecursoAgencia implements Registrable{//Clase 
 
     @Override
     public String toString() {
-        return "Tipo Trabajador: Conductor | " + "Nombre: " + nombre + " | ID: " + id + " | Tipo de Vehículo: " + tipoVehiculo + " | Agencia de movilizacion: " + agenciaMovilizacion;
+        return "Tipo Trabajador: Conductor | " + super.toString() + " | Tipo de Vehículo: " + tipoVehiculo + " | Agencia de movilizacion: " + agenciaMovilizacion;
     }
 }

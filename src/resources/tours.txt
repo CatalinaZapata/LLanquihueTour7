@@ -3,3 +3,13 @@ GuiaTuristico|Felipe Andrade|1002|Avistamiento de fauna|LlanquihueTour
 ColaboradorExterno|Martin Valdes|2001|Historia local|Patagonia Experience
 Movilizacion|Rodrigo Fuentes|3001|Traslado turistico de pasajeros|Sur Transfer
 Movilizacion|Daniela Rojas|3002|Conduccion ruta austral|Llanquihue Transportes
+GuiaTuristico|Raven|8855|Gastronomia|LlanquihueTour
+GuiaTuristico|Sebastian Vera|1004|Observacion de aves|LlanquihueTour
+Guia Turistico|Valentina Muñoz|1003|Senderismo en parques nacionales|LlanquihueTour
+Guia Externo|Javiera Soto|2002|Gastronomia tradicional|Sabores del Sur
+Conductor|Alejandro Vargas|3003|Traslado aeropuerto ban|Puerto Varas Transfer
+Guia Externo|Cristobal Herrera|2003|Primeros auxilios outdoor|Adventure patagonia
+Movilizacion|Carolina Fuentes|3004|Transporte grupos grandes bus|Ruta Austral
+Guia Turistico|Catalina Rios|1005|Historia y patrimonio cultural|LlanquihueTour
+Guia Externo|Fernanda Morales|2004|Interpretacion ambiental|EcoLlanquihue
+Movilizacion|Ignacio Morales|3005|Vehiculo todo terreno zonas rurales|Patagonia Transport

@@ -1,22 +1,20 @@
 package model;
 
-public class RecursoAgencia {//Superclase Abstracta con atrib comunes de las clases hijas. Sin getters y setter puesto que no se modificaran los atributos, solo se ingresaran.
+public abstract class RecursoAgencia {//Superclase Abstracta con atrib comunes de las clases hijas. Sin getters y setter puesto que no se modificaran los atributos, solo se ingresaran.
     protected String nombre;
-    protected int id;
+    protected ID id;
 
     public RecursoAgencia() {}
 
-    public RecursoAgencia(String nombre, int id) {
+    public RecursoAgencia(String nombre, ID id) {
         this.nombre = nombre;
         this.id = id;
     }
 
-    public void mostrarResumen() {//Polimorfismo para mostrar resultado en consola
-        System.out.print("Nombre: " + nombre + " | ID: " + id);
-    }
+    public String getNombre() { return nombre;}
+    public void setNombre(String nombre) { this.nombre = nombre;}
 
-    @Override
-    public String toString() {//toString para mostrar resultado en una interfaz grafica
-        return "Nombre: " + nombre + " | ID: " + id;
-    }
+    public String registrarDatos() { return nombre + "|" + id.getId();}
+    public void mostrarResumen() { System.out.print("Nombre: " + nombre + " | ID: " + id.getId());}//Polimorfismo para mostrar resultado en consola
+    public String toString() { return "Nombre: " + nombre +" | ID: " + id.getId();}//toString para mostrar resultado en una interfaz grafica
 }

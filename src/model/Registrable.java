@@ -1,5 +1,6 @@
 package model;
 
-public interface Registrable {//Interfaz que def el comp. comun para las entidades mediante el met mostrarResumen(), funciona como contrato
+public interface Registrable {
+    String registrarDatos();
     void mostrarResumen();
 }

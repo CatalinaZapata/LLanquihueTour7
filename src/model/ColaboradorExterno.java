@@ -4,7 +4,7 @@ public class ColaboradorExterno extends RecursoAgencia implements Registrable {/
     private String especialidad;
     private String agenciaExterna;
 
-    public ColaboradorExterno(String nombre, int id, String especialidad, String agenciaExterna) {
+    public ColaboradorExterno(String nombre, ID id, String especialidad, String agenciaExterna) {
         super(nombre, id);
         this.especialidad = especialidad;
         this.agenciaExterna = agenciaExterna;
@@ -16,6 +16,11 @@ public class ColaboradorExterno extends RecursoAgencia implements Registrable {/
     }
 
     @Override
+    public String registrarDatos() {
+        return "Guia Externo|" + super.registrarDatos() + "|" + especialidad + "|" + agenciaExterna;
+    }
+
+    @Override
     public void mostrarResumen() {
         System.out.print("Tipo Trabajador: Guia Externo | ");
         super.mostrarResumen();
@@ -24,6 +29,6 @@ public class ColaboradorExterno extends RecursoAgencia implements Registrable {/
 
     @Override
     public String toString() {
-        return "Tipo Trabajador: Guia Externo | " + "Nombre: " + nombre + " | ID: " + id + " | Especialidad: " + especialidad + " | Agencia: " + agenciaExterna;
+        return "Tipo Trabajador: Guia Externo | " + super.toString() + " | Especialidad: " + especialidad + " | Agencia: " + agenciaExterna;
     }
 }

@@ -31,7 +31,7 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 ├── 📁 resources/                    # Paquete destinado al almacenamiento de información externa.
 │   └── 📄 tours.txt                 # Archivo de texto que almacena las entidades registradas.
 │ 
-├── 📁 ui/                           # Paquete encargado de la interacción con el usuario.
+├── 📁 app/                           # Paquete encargado de la interacción con el usuario.
 │   └── 📄 Main                      # Punto de entrada del programa, muestra menú y ejecuta acciones.
 │ 
 ├── 📁 util/                         # Paquete con herramientas reutilizables del sistema.
@@ -44,7 +44,7 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 ## ⚙️ Instrucciones para compilar y ejecutar `Main`
 1. Abrir el proyecto en IntelliJ IDEA.
 2. Esperar a que IntelliJ cargue las dependencias del proyecto.
-3. Navegar hasta la clase `Main` ubicada en el paquete `ui`.
+3. Navegar hasta la clase `Main` ubicada en el paquete `app`.
 4. Ejecutar el método `main()` presionando el botón **Run** (▶).
 5. Verificar los resultados en la consola de ejecución.
 

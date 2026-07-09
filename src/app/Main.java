@@ -1,4 +1,4 @@
-package ui;
+package app;
 
 import data.GestorEntidades;
 import javax.swing.*;
@@ -11,17 +11,18 @@ public class Main {
 
         while (continuar) {
             String[] desplegable =  {"1.Registrar Guía Turístico",//se usa una lista desplegable para evitar errores en ingreso de datos
-                    "2.Registrar Guía Externo",
-                    "3.Registrar Conductor",
-                    "4.Mostrar Historial"};
+                                     "2.Registrar Guía Externo",
+                                     "3.Registrar Conductor",
+                                     "4.Mostrar Historial Completo",
+                                     "5.Filtrar por tipo de funcionario"};
 
             Object opcion = JOptionPane.showInputDialog(null,
-                    "Seleccione una opción",
-                    "Menu Llanquihue Tour",
-                    JOptionPane.INFORMATION_MESSAGE,
-                    null,
-                    desplegable,
-                    desplegable[0]);//Aquí se dejan las especificaciones de la lista desplegable
+                            "Seleccione una opción",
+                            "Menu Llanquihue Tour",
+                            JOptionPane.INFORMATION_MESSAGE,
+                            null,
+                            desplegable,
+                            desplegable[0]);//Aquí se dejan las especificaciones de la lista desplegable
 
             int seleccion = java.util.Arrays.asList(desplegable).indexOf(opcion) + 1;//+1 para que inicie en 1 y no en 0
 
@@ -41,8 +42,12 @@ public class Main {
                 case 4:
                     gestor.mostrarHistorialResumen();
                     break;
+                case 5:
+                    gestor.filtrarEntidades();
+                    break;
                 default:
-
+                    JOptionPane.showMessageDialog(null, "Opción ivalida.");
+                    break;
             }
         }
     }
