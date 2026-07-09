@@ -18,12 +18,12 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 ```plaintext
     📁 src/
 ├── 📁 data/                         # Paquete encargado de gestionar las entidades del sistema.
-│   └── 📄 GestorEntidades           # Administra la colección ArrayList<Registrable>, registra entidades mediante métodos.
+│   └── 📄 GestorEntidades           # Administra la colección ArrayList<Registrable>, administra entidades mediante métodos.
 │   
 ├── 📁 model/                        # Paquete que contiene el modelo de datos de la aplicación.
-│   │
-│   ├── 📄 Registrable               # Interfaz que define el contrato común mostrarResumen().
+│   ├── 📄 Registrable               # Interfaz que define el contrato común mostrarResumen() y registrarDatos().
 │   ├── 📄 RecursoAgencia            # Superclase abstracta que contiene atributos y comportamientos comunes.
+│   ├── 📄 ID                        # Clase utilizada para composición. Encapsula y administra el ID.
 │   ├── 📄 GuiaTuristico             # Representa un guía turístico perteneciente a LlanquihueTour.
 │   ├── 📄 ColaboradorExterno        # Representa un guía externo asociado a otra agencia.
 │   └── 📄 Movilizacion              # Representa un conductor o servicio de transporte turístico.
